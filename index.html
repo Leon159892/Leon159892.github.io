@@ -4,37 +4,54 @@
     <meta charset="UTF-8">
     <title>學生資料表</title>
     <style>
-        /* 設定表格樣式 */
+        /* 設定表格整體樣式 */
         table {
-            /* 讓框線合併成單一框線 */
+            /* 1. 框線合併（題目要求） */
             border-collapse: collapse;
-            width: 50%; /* 可根據需求調整寬度 */
+            /* 不要設定 width: 100%，讓它像圖片一樣自然寬度 */
+            min-width: 300px; 
         }
 
-        /* 設定標題(th)與單元格(td)樣式 */
+        /* 2. 設定標題(th)與單元格(td)樣式 */
         th, td {
-            border: 1px solid black; /* 設定黑色邊框 */
-            padding: 5px;            /* 設定內距為 5px */
-            text-align: left;        /* 文字向左對齊 */
+            border: 1px solid black;
+            /* 3. 內距 5px（題目要求） */
+            padding: 5px;
+            /* 4. 文字靠左（題目要求） */
+            text-align: left;
+            font-family: serif; /* 圖片中使用的是有襯線字體，如 Times New Roman */
         }
 
-        
+        /* 讓標題加粗 */
         th {
             font-weight: bold;
+        }
+
+        /* 調整兩欄寬度比例，模擬圖片視覺 */
+        th:first-child, td:first-child {
+            width: 120px; /* Name 欄位較窄 */
+        }
+
+        th:last-child, td:last-child {
+            width: 200px; /* Student ID 欄位較寬 */
         }
     </style>
 </head>
 <body>
 
     <table>
-        <tr>
-            <th>Name</th>
-            <th>Student ID</th>
-        </tr>
-        <tr>
-            <td>Liang-Ting Liu</td>
-            <td>113403541</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Student ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Liang-Ting Liu</td>
+                <td>113403541</td>
+            </tr>
+        </tbody>
     </table>
 
 </body>
