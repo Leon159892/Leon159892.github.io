@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <title>Liang-Ting Liu</title>
+    <meta charset="UTF-8">
+    <title>學生資料表</title>
+    <style>
+        /* 設定表格樣式 */
+        table {
+            /* 讓框線合併成單一框線 */
+            border-collapse: collapse;
+            width: 50%; /* 可根據需求調整寬度 */
+        }
+
+        /* 設定標題(th)與單元格(td)樣式 */
+        th, td {
+            border: 1px solid black; /* 設定黑色邊框 */
+            padding: 5px;            /* 設定內距為 5px */
+            text-align: left;        /* 文字向左對齊 */
+        }
+
+        
+        th {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Liang-Ting Liu</h1>
-
-    <p>113403541</p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Student ID</th>
+        </tr>
+        <tr>
+            <td>Liang-Ting Liu</td>
+            <td>113403541</td>
+        </tr>
+    </table>
 
 </body>
 </html>
